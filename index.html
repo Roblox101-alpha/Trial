@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+t
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Apartment for Rent in Mauritius - Safe, Comfortable, and Fully Equipped">
+    <title>Luxury Apartment in Mauritius</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for a modern touch -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons (like contact buttons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Luxury Apartment</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#apartment">Apartment Details</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to Your Luxury Apartment in Mauritius</h1>
+        <p>Discover the perfect blend of luxury, comfort, and convenience.</p>
+        <a href="#booking" class="cta-btn">Book Your Stay</a>
+    </div>
+    <img src="https://assets.onecompiler.app/4388edbhu/4388d7y8v/20210927_170328.jpg" alt="Apartment Main Image" class="hero-image">
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our luxury apartment in Mauritius! Located in the serene area of Flic en Flac, our apartment offers the perfect blend of comfort, privacy, and convenience. Whether you are here for a short vacation or an extended stay, we ensure that you have a memorable experience.</p>
+        <p>Our fully furnished apartment comes with modern amenities, a private pool, and easy access to nearby attractions. Come and enjoy the tropical beauty of Mauritius while experiencing the best of luxury living.</p>
+    </div>
+</section>
+
+<!-- Apartment Details Section -->
+<section id="apartment" class="apartment-section">
+    <div class="container">
+        <h2>Apartment Details</h2>
+        <p>Fully furnished, 4 rooms (2 suites), private pool, and video surveillance. The apartment is located in the peaceful area of Flic en Flacq.</p>
+        <h3>Features</h3>
+        <ul>
+            <li>4 Rooms, 2 Suites</li>
+            <li>Private Pool</li>
+            <li>Video Surveillance</li>
+            <li>Air Conditioning in Each Room</li>
+            <li>Access to 2 Cars in Garage</li>
+        </ul>
+        <p><strong>Note:</strong> No pets allowed.</p>
+    </div>
+    <div class="images-gallery">
+        <img src="https://assets.onecompiler.app/4388edbhu/4388d7y8v/2f92c7c2-f938-4ce1-9af0-16ab2e2b8c53.JPG" alt="Apartment View 1" class="gallery-image">
+        <img src="https://assets.onecompiler.app/4388edbhu/4388d7y8v/73513b63-f5a6-423a-be23-05a366630d1a.JPG" alt="Apartment View 2" class="gallery-image">
+        <img src="https://assets.onecompiler.app/4388edbhu/4388d7y8v/a400473f-a580-479c-9840-1d844a197c99.JPG" alt="Apartment View 3" class="gallery-image">
+        <img src="https://assets.onecompiler.app/4388edbhu/4388d7y8v/IMG_6289.jpg" alt="Apartment View 4" class="gallery-image">
+    </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="booking-section">
+    <div class="container">
+        <h2>Booking</h2>
+        <p>Available for both short and long-term rental.</p>
+        <form action="booking-form-handler.php" method="post" class="booking-form">
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+            <label for="carRental">Car Rental (Optional):</label>
+            <input type="checkbox" id="carRental" name="carRental">
+            <button type="submit" class="cta-btn">Book Now</button>
+        </form>
+    </div>
+</section>
+
+<section id="payment">
+    <div class="container">
+        <h2>Make a Reservation</h2>
+        <p>Click below to book your stay and make your payment:</p>
+
+        <!-- PayPal Payment Button -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
+            <input type="submit" value="Pay Now with PayPal" class="paypal-button">
+        </form>
+        
+        <!-- Stripe Payment Button -->
+        <form action="/charge" method="post">
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="YOUR_PUBLISHABLE_KEY"
+                  data-amount="5000" <!-- Amount in cents (e.g., 5000 cents = 50.00) -->
+                  data-name="Apartment in Flic en Flac"
+                  data-description="Booking Payment"
+                  data-image="https://assets.onecompiler.app/4388edbhu/4388d7y8v/20210927_170328.jpg"
+                  data-currency="USD">
+          </script>
+        </form>
+
+    </div>
+</section>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- Reviews Section -->
+<section id="reviews" class="reviews-section">
+    <div class="container">
+        <h2>Guest Reviews</h2>
+        <p>Leave a review below:</p>
+        <form action="reviews-handler.php" method="post" class="review-form">
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" required></textarea>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+            <button type="submit" class="cta-btn">Submit Review</button>
+        </form>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>For more information or to book your stay, please contact us on:+230 52502515</p>
+        <a href="https://wa.me/" class="cta-btn" target="_blank">Contact only via WhatsApp</a> +1709 2194261
+        <p>Email Us: <a href="mailto:a.emamally@gmail.com">a.emamally@gmail.com</a></p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Luxury Apartment in Mauritius.</p>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
